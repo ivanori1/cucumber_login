@@ -8,7 +8,7 @@ Feature: Login
     And Close browser
     Examples:
       | username | password |
-      |          |          |
+      | empty    | empty    |
 
   Scenario Outline: 2.	Failed login – EULA is accepted
     Given Go to webstation
@@ -98,7 +98,7 @@ Feature: Login
       | dpaafx.web92 | TTtest123   |
       | teletrad.95  | 7zvTFDRY    |
 
-  Scenario Outline:	Expired session
+  Scenario Outline:    Expired session
     Given Go to webstation
     And Go to webstation expired session
     When Set <username> and <password>
